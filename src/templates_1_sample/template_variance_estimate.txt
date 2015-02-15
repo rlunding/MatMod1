@@ -1,0 +1,4 @@
+Da både $n = %(n)s, S = %(S)s$ og $USS = %(USS)s$ er kendt, kan variansen estimeres til:
+\begin{equation*}
+s^{2} = \frac{1}{%(n)s-1} (%(USS)s - \frac{%(S)s^{2}}{%(n)s}) = %(sigmaresult)s
+\end{equation*}

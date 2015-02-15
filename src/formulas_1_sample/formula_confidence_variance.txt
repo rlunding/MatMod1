@@ -1,0 +1,4 @@
+Konfidensintervallet for middelværdien kan findes ved brug af følgende formel:
+\begin{equation*}
+C_{1 - \alpha}(\sigma^{2}) = \Bigg[\frac{fs^{2}}{\chi^{2}_{1-\alpha/2}(f)}, \frac{fs^{2}}{\chi^{2}_{\alpha/2}(f)}\Bigg]\text{, (3.15) p. 61}
+\end{equation*}

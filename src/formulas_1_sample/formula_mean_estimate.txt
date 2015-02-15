@@ -1,0 +1,4 @@
+Et estimat for middelværdien findes ved følgende formel:
+\begin{equation*}
+\mu \leftarrow \bar{x}. = \frac{1}{n} \sum\limits_{i=1}^{n} x_{i} = \frac{1}{n} S \sim\sim N(\mu, \frac{\sigma_{0}^{2}}{n})\text{, (3.1) p. 55}
+\end{equation*}

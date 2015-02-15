@@ -1,0 +1,29 @@
+%% !TeX spellcheck = en_US
+\documentclass[twoside, a4paper]{report}
+
+\usepackage{a4}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{enumitem}
+\usepackage[compact]{titlesec}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{blindtext}
+\usepackage[margin=2cm]{geometry}
+\usepackage{natbib}
+\usepackage[bookmarks]{hyperref}
+\setlist{nolistsep}
+\setcounter{tocdepth}{1}
+
+
+\begin{document}
+
+%(name)s, %(studyid)s
+%(content)s
+\end{document}

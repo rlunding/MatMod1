@@ -1,0 +1,4 @@
+Et estimat for variansen findes ved følgende formel:
+\begin{equation*}
+\sigma^{2} \leftarrow s^{2} = \frac{1}{n-1}\sum\limits_{i=1}^{n}(x_{i} - \bar{x}.)^{2} = \frac{1}{n-1} (USS - \frac{S^{2}}{n}) = \frac{1}{n-1} SSD \sim\sim \sigma^{2}\chi^{2}(f)/f \text{, (3.7) p. 57}
+\end{equation*}

@@ -1,0 +1,4 @@
+Da både $n = %(n)s, S = %(S)s$ og $USS = %(USS)s$ er kendt, kan middelværdien estimeres til:
+\begin{equation*}
+\bar{x}. = \frac{1}{%(n)s} %(S)s = %(muresult)s
+\end{equation*}

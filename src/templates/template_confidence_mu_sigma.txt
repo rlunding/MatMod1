@@ -1,0 +1,12 @@
+Det er nu også muligt at udregne et 95 procent konfidenstinterval for middelværdien og variansen. Til formålet bruges følgende formeler:
+\begin{eqnarray}\nonumber
+C_{\alpha}(\mu) & = & \Bigg[\bar{x}. - \sqrt{\frac{s^{2}}{n}} t_{1-\alpha/2}(f), \bar{x}. + \sqrt{\frac{s^{2}}{n}} t_{1-\alpha/2}(f)\Bigg]\text{, (3.23) p. 63.}\\ \nonumber
+C_{\alpha}(\sigma^{2}) & = & \Bigg[\frac{fs^{2}}{\chi^{2}_{1-\alpha/2}(f)}, \frac{fs^{2}}{\chi^{2}_{\alpha/2}(f)}\Bigg]\text{, (3.15) p. 61}
+\end{eqnarray}
+Der kan nu indsættes og udregnes. Lad $\alpha = 0.05$ og $f = 11$ (antal frihedsgrader):
+\begin{eqnarray}\nonumber
+C_{%(alphavalue)s}(\mu) & = & \Bigg[%(x)s - \sqrt{\frac{%(sigmaresult)s}{%(n)s}} t_{0.975}(%(f)s); %(x)s + \sqrt{\frac{%(sigmaresult)s}{%(n)s}} t_{0.975}(%(f)s)\Bigg]\\ \nonumber
+& = & [4.611; 7.555] \text{, \quad hvor $t_{0.975}(11) = 2.201$}\\ \nonumber
+C_{%(alphavalue)s}(\sigma^{2}) & = & \Bigg[\frac{%(f)s * %(sigmaresult)s}{\chi^{2}_{0.975}(%(f)s)}; \frac{%(f)s * %(sigmaresult)s}{\chi^{2}_{0.025}(%(f)s)}\Bigg]\\ \nonumber
+& = & [2.696; 15.455] \text{, \quad hvor $\chi^{2}_{0.975}(%(f)s) = 21.9$ og $\chi^{2}_{0.025}(%(f)s) = 3.82$}
+\end{eqnarray}

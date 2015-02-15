@@ -1,0 +1,4 @@
+Den fælles varians kan estimeres ved brug af følgende formel:
+\begin{equation*}
+\sigma^{2} \leftarrow s_{1}^{2} = \frac{f_{(1)}s_{(1)}^{2} + f_{(2)}s_{(2)}^{2}}{f_{(1)} + f_{(2)}} = \frac{SSD_{(1)} + SSD_{(2)}}{f_{(1)} + f_{(2)}} = \frac{SSD_{1}}{f_{1}} \sim\sim\sigma^{2}\chi^{2}(f_{(1)}+f_{(2)})/(f_{(1)}+f_{(2)}), p. 82
+\end{equation*}
