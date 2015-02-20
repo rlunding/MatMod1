@@ -9,7 +9,7 @@ template_path = r"templates_1_sample/"
 def estimatemean(formula, n, S, USS):
     result = ""
     if (formula):
-        result = utilities.loadformula("mean_estimate", "1")
+        result = utilities.loadformula("mean_estimate", "1_sample")
     muresult = (1.0/n) * S
     sigmaresult = (1.0/(n-1.0)) * (USS - ((S*S)/n))
     with open (template_path + "template_mean_estimate.txt", "r") as template_file:
@@ -25,7 +25,7 @@ def estimatemean(formula, n, S, USS):
 def estimatevarince(formula, n, S, USS):
     result = ""
     if (formula):
-        result = utilities.loadformula("variance_estimate", "1")
+        result = utilities.loadformula("variance_estimate", "1_sample")
     muresult = (1.0/n) * S
     sigmaresult = (1.0/(n-1.0)) * (USS - ((S*S)/n))
     with open (template_path + "template_variance_estimate.txt", "r") as template_file:
@@ -47,7 +47,7 @@ def equalmean():
 def confidencemean(formula, alpha, n, S, USS):
     result = ""
     if formula:
-        result = utilities.loadformula("confidence_mean", "1")
+        result = utilities.loadformula("confidence_mean", "1_sample")
     muresult = (1.0/n) * S
     sigmaresult = (1.0/(n-1.0)) * (USS - ((S*S)/n))
     dof = n-1
@@ -67,11 +67,10 @@ def confidencemean(formula, alpha, n, S, USS):
         }
     return result
 
-
 def confidencevariance(formula, alpha, n, S, USS):
     result = ""
     if formula:
-        result = utilities.loadformula("confidence_variance", "1")
+        result = utilities.loadformula("confidence_variance", "1_sample")
     sigmaresult = (1.0/(n-1.0)) * (USS - ((S*S)/n))
     dof = n-1
     chi2high = st.chi2(1-(alpha/2), dof)
@@ -89,6 +88,29 @@ def confidencevariance(formula, alpha, n, S, USS):
             'resultlow': round(resultlow, 3)
         }
     return result
+
+def confidencesd(formula, alpha, n, S, USS):
+    result = ""
+    if formula:
+        result = utilities.loadformula("confidence_sd", "1_sample")
+    sigmaresult = (1.0/(n-1.0)) * (USS - ((S*S)/n))
+    dof = n-1
+    chi2high = st.chi2(1-(alpha/2), dof)
+    chi2low = st.chi2((alpha/2), dof)
+    resulthigh = math.sqrt((dof * sigmaresult) / chi2high)
+    resultlow = math.sqrt((dof * sigmaresult) / chi2low)
+    with open (template_path + "template_confidence_sd.txt", "r") as template_file:
+        result += template_file.read() % {
+            'alpha': alpha,
+            'sigmaresult': round(sigmaresult,3),
+            'dof': dof,
+            'chi2high': round(chi2high, 3),
+            'chi2low': round(chi2low, 3),
+            'resulthigh': round(resulthigh, 3),
+            'resultlow': round(resultlow, 3)
+        }
+    return result
+
 
 def withininterval():
     print("not implemented")

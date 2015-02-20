@@ -12,9 +12,12 @@ def t(alpha, dof):
 def Ft(value, dof):
     return scipy.stats.t.cdf(value, dof)
 
-def u():
-    return 1.96
+def u(alpha):
+    return scipy.stats.norm.ppf(alpha)
+    #return 1.96
 
 def Ff(value, f1, f2):
     return scipy.stats.f.cdf(value, f1, f2)
 
+def Fchi2(value, dof):
+    return scipy.stats.chi2.cdf(value, dof)

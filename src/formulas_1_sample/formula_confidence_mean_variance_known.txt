@@ -1,4 +1,4 @@
-Konfidensintervallet for middelværdien kan findes ved brug af følgende formel, når variansen er kendt. Bemærk at: $u_{0.975} = 1.960$, dette bruges ved et 0.95 (95%) konfidensinterval.
+Konfidensintervallet for middelværdien kan findes ved brug af følgende formel, når variansen er kendt. Bemærk at: $u_{0.975} = 1.960$, dette bruges ved et 0.95 (95 procent) konfidensinterval.
 \begin{equation*}
 C_{1 - \alpha}(\mu) = \Bigg[\bar{x}. - \sqrt{\frac{\sigma^{2}_{0}}{n}} u_{1-\alpha/2}, \bar{x}. + \sqrt{\frac{\sigma^{2}_{0}}{n}} u_{1-\alpha/2}\Bigg]\text{, (3.20) p. 62.}
 \end{equation*}

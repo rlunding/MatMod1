@@ -1,0 +1,9 @@
+		Da vi kender: $k = %(k)s, f_{(i)} = \{ %(fi)s \}, s^{2}_{(i)} = \{ %(si)s \}$, og det bemærkes at $\forall i f_{(i)} \geq 2$, så kan $p_{obs}(x)$ udregnes:
+		\begin{eqnarray}\nonumber
+		f_{1} & = & n. - k = %(n)s - %(k)s = %(fone)s \\\nonumber
+		s_{1}^{2} & = & = \frac{SSD_{1}}{f_{1}} = \frac{ %(SSDone)s }{ %(fone)s } = %(sonesq)s\\ \nonumber
+		-2 \ln Q(x) & = & f_{1} \ln s_{1}^{2}- \sum\limits_{i = 1}^{k} f_{(i)}\ln s_{(i)}^{2} = %(fone)s * \ln %(sonesq)s - %(sumi)s = %(lnqx)s \\ \nonumber
+		C & = & 1 + \frac{1}{3(k-1)}\Big[\Big(\sum\limits_{i=1}^{k} \frac{1}{f_{(i)}}\Big) - \frac{1}{f_{1}} \Big] = 1 + \frac{1}{3( %(k)s -1)}\Big[ %(fis)s - \frac{1}{ %(fone)s } \Big] = %(C)s \\ \nonumber
+		Ba & = & \frac{-2 ln Q(x)}{C} = \frac{ %(lnqx)s }{ %(C)s } = %(Ba)s \\\nonumber
+		p_{obs}(x) & = & 1 - F_{\chi^{2}(k-1)}(Ba) = 1 - F_{\chi^{2}( %(k)s -1)}( %(Ba)s ) = %(pobs)s
+		\end{eqnarray}

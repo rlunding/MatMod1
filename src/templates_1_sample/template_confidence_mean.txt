@@ -1,4 +1,4 @@
-Der kan nu indsættes og udregnes. Lad $\alpha = %(alpha)s, n = %(n)s, f = %(dof)s$ (antal frihedsgrader), $ s^{2} = %(sigmaresult)s, t_{1- %(alpha)s /2}(%(dof)s) = %(t)s$;
+Der kan nu indsættes og udregnes. Lad $\alpha = %(alpha)s, n = %(n)s, f = %(dof)s$ (antal frihedsgrader),\\ $ s^{2} = %(sigmaresult)s, t_{1- %(alpha)s /2}(%(dof)s) = %(t)s$;
 \begin{equation*}
 C_{1 - %(alpha)s}(\mu) = \Bigg[%(muresult)s - \sqrt{\frac{%(sigmaresult)s}{%(n)s}} t_{1-%(alpha)s/2}(%(dof)s); %(muresult)s + \sqrt{\frac{%(sigmaresult)s}{%(n)s}} t_{1-%(alpha)s/2}(%(dof)s)\Bigg] = [%(resulthigh)s; %(resultlow)s]
 \end{equation*}

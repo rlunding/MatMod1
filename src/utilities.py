@@ -8,7 +8,7 @@ import variables
 template_path = variables.template_path
 
 def loadformula(formula, obs):
-    with open ("formulas_" + obs + "_sample/formula_" + formula + ".txt", "r") as template_file:
+    with open ("formulas_" + obs + "/formula_" + formula + ".txt", "r") as template_file:
         return template_file.read()
 
 

@@ -1,4 +1,4 @@
 Der kan nu indsættes og udregnes. Lad $\alpha = %(alpha)s, f = %(dof)s$ (antal frihedsgrader),\\ $ s^{2} = %(sigmaresult)s, \chi^{2}_{1-%(alpha)s/2}(%(dof)s) = %(chi2high)s$ og $\chi^{2}_{%(alpha)s}(%(dof)s) = %(chi2low)s$;
 \begin{equation*}
-C_{1 - %(alpha)s}(\sigma^{2}) = \Bigg[\frac{%(dof)s * %(sigmaresult)s}{\chi^{2}_{1-%(alpha)s/2}(%(dof)s)}, \frac{%(dof)s * %(sigmaresult)s}{\chi^{2}_{%(alpha)s/2}(%(dof)s)}\Bigg] = [%(resulthigh)s; %(resultlow)s]
+C_{1 - %(alpha)s}(\sigma) = \Bigg[\sqrt{\frac{%(dof)s * %(sigmaresult)s}{\chi^{2}_{1-%(alpha)s/2}(%(dof)s)}}, \sqrt{\frac{%(dof)s * %(sigmaresult)s}{\chi^{2}_{%(alpha)s/2}(%(dof)s)}}\Bigg] = [%(resulthigh)s; %(resultlow)s]
 \end{equation*}
