@@ -1,0 +1,19 @@
+        Til at foretage disse beregninger kan følgende beregningsskema bruges.
+		\begin{table}[h]
+		\centering
+		\def\arraystretch{1.5}
+		\begin{tabular}{cccc}\hline
+		& x & & t\\\hline
+		n & & n & \\\hline
+		S & $S_{x}$ & & $S_{t}$\\\hline
+		USS & $USS_{x}$ & & $USS_{t}$\\\hline
+		SP & & $SP_{xt}$ & \\\hline
+		SSD & $USS_{x}-\frac{S^{2}_{x}}{n}$ & & $USS_{t}-\frac{S^{2}_{t}}{n}$\\\hline
+		SPD & & $SP_{xt}- \frac{S_{x}S_{t}}{n}$ & \\\hline
+		$\hat{\beta}$ & & $\frac{SPD_{xt}}{SSD_{t}}$ & \\\hline
+		$\hat{\alpha}$ & & $\frac{1}{n} \big[S_{x} - \hat{\beta}S_{t} \big]$ & \\\hline
+		$SSD_{02}$ & & $SSD_{x}-\frac{SPD^{2}_{xt}}{SSD_{t}}$ & \\\hline
+		$s_{02}^{2}$ & & $\frac{1}{n-2}SSD_{02}$ & \\\hline
+		\end{tabular}
+		\caption{Beregningsskema til lineær regression. Fra BG side 125.}
+		\end{table}

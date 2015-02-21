@@ -1,0 +1,18 @@
+        Ved beregning fås følgende resultater:
+        \begin{table}[h]
+		\centering
+		\def\arraystretch{1.5}
+		\begin{tabular}{cccc}\hline
+		& (x) & & (t)\\\hline
+		n & & $ %(n)s $ & \\\hline
+		S & $ %(Sx)s $ & & $ %(St)s $\\\hline
+		USS & $ %(USSx)s $ & & $ %(USSt)s $\\\hline
+		SP & & $ %(SP)s $ & \\\hline
+		SSD & $ %(SSDx)s $ & & $ %(SSDt)s $\\\hline
+		SPD & & $ %(SPD)s $ & \\\hline
+		$\hat{\beta}$ & & $\frac{%(SPD)s}{%(SSDt)s} = %(beta)s \sim\sim N(\beta, \frac{\sigma^{2}}{SSD_{t}})$ & \\\hline
+		$\hat{\alpha}$ & & $\frac{1}{%(n)s} \big[%(Sx)s - %(beta)s %(St)s \big] = %(alpha)s \sim\sim N(\alpha, \sigma^{2}(\frac{1}{n}+\frac{\bar{t}.^{2}}{SSD_{t}}))$ & \\\hline
+		$SSD_{02}$ & & $%(SSDx)s-\frac{%(SPD)s^{2}}{%(SSDt)s} = %(SSD02)s$ & \\\hline
+		$s_{02}^{2}$ & & $\frac{1}{%(n)s - 2} %(SSD02)s =  %(s02sq)s \sim\sim \sigma^{2}\chi^{2}(n-2)/(n-2)$ & \\\hline
+		\end{tabular}
+		\end{table}

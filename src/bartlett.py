@@ -13,11 +13,11 @@ def bartlettPDF(formula, k, fi, si):
     p = pobs(k, fi, si)
     with open (template_path + "template_bartlett_test.txt", "r") as template_file:
         result += template_file.read() % {
-            'k': int(k),
+            'k': int(round(k,0)),
             'fi': "liste af input",
             'si': "liste af input",
-            'n': int((sumf1(fi)+k)),
-            'fone': int(sumf1(fi)),
+            'n': int(round((sumf1(fi)+k),0)),
+            'fone': int(round(sumf1(fi),0)),
             'SSDone': round(SSD(fi, si), 4),
             'sonesq': round(s1sq(fi, si), 4),
             'sumi': round(SUMI(fi, si), 4),
