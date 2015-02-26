@@ -1,0 +1,5 @@
+        Hvis variansen er kendt, $\sigma^{2} = \sigma_{0}^{2}$, kan vi bruge en u-test at teste om $H_{0}: \mu = \mu_{0}$. Til dette bruges følgende formel.
+		\begin{eqnarray}\nonumber
+		u(x) & = & \frac{\bar{x}. - \mu_{0}}{\sqrt{\frac{\sigma_{0}^{2}}{n}}} \sim\sim N(0,1)\\ \nonumber
+		p_{obs}(x) & = & 2[1- \Phi(|u(x)|)]
+		\end{eqnarray}

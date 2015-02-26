@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'Lunding'
 
 import utilities
@@ -10,15 +11,19 @@ n = 12
 S = 73.0
 USS = 503.12
 
-opgave1 = onesample.estimatemean(True, n, S, USS) + onesample.estimatevarince(True, n, S, USS)
-opgave2 =   onesample.confidencevariance(True, alpha, n, S, USS) \
-            + onesample.confidencesd(True, alpha, n, S, USS) \
-            + onesample.confidencemean(True, alpha, n, S, USS)
+opgave11 = onesample.estimatemeanPDF(True, n, S, USS) + onesample.estimatevarincePDF(True, n, S, USS)
+opgave12 =   onesample.confidencevariancePDF(True, alpha, n, S, USS) \
+            + onesample.confidencesdPDF(True, alpha, n, S, USS) \
+            + onesample.confidencemeanPDF(True, alpha, n, S, USS)
+
+opgave13 = utilities.createexercise("Undersøg om middelværdien af vægttabet er 6.5 kg", onesample.ttest(True, n, S, USS, 6.5))
+opgave14 = utilities.createexercise("Undersøg om middelværdien af vægttabet er 6.5 kg", onesample.utest(True, n, S, 6.5, 5))
+
 k = 7
 fi = (2, 2, 2, 2, 2, 2, 2)
 si = (111.0, 21.0, 49.0, 56.333333, 64.333333, 84, 49.333333)
 
-opgave3 = utilities.createexercise("Goer dit", bartlett.bartlettPDF(True, k, fi, si))
+opgave21 = utilities.createexercise("Goer dit", bartlett.bartlettPDF(True, k, fi, si))
 
 n = 21
 Sx = 6068
@@ -27,12 +32,13 @@ USSx = 1773300
 USSt = 13353
 SP = 153773
 
-opgave4 = utilities.createexercise("Goer dat", lr.templatePDF(True, n, Sx, St, USSx, USSt, SP))
+opgave22 = utilities.createexercise("Goer dat", lr.templatePDF(True, n, Sx, St, USSx, USSt, SP))
 
 utilities.createLatexPDF("Afl",utilities.createdocument(
     utilities.createsection("Opgave 1",
-        utilities.createexercise("Estimer middelvaeriden og variansen.", opgave1) +
-        utilities.createexercise("Find et 95 procent konfidens interval for middelvaerdien, spedningen og variansen", opgave2)) +
+        utilities.createexercise("Estimer middelvaeriden og variansen.", opgave11) +
+        utilities.createexercise("Find et 95 procent konfidens interval for middelvaerdien, spedningen og variansen", opgave12) +
+        opgave13 + opgave14) +
     utilities.createsection("Opgave 2",
-                            opgave3 + opgave4)
+                            opgave21 + opgave22)
 ))

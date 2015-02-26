@@ -32,7 +32,6 @@ def bartlettPDF(formula, k, fi, si):
         result += " > 0.05$ forkaster vi ikke hypotesen."
     else:
         result += " < 0.05$ forkaster vi hypotesen."
-
     return result
 
 def pobs(k, fi, si):

@@ -1,0 +1,5 @@
+        Hvis variansen er ukendt, kan vi bruge en t-test at teste om $H_{0}: \mu = \mu_{0}$.Til dette bruges følgende formel.
+		\begin{eqnarray}\nonumber
+		t(x) & = & \frac{\bar{x}. - \mu_{0}}{\sqrt{\frac{s^{2}}{n}}} \sim\sim t(f)\\ \nonumber
+		p_{obs}(x) & = & 2[1- F_{t(f)}(|t(x)|)]
+		\end{eqnarray}
