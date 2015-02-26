@@ -7,3 +7,9 @@
 		Ba & = & \frac{-2 ln Q(x)}{C} = \frac{ %(lnqx)s }{ %(C)s } = %(Ba)s \\\nonumber
 		p_{obs}(x) & = & 1 - F_{\chi^{2}(k-1)}(Ba) = 1 - F_{\chi^{2}( %(k)s -1)}( %(Ba)s ) = %(pobs)s
 		\end{eqnarray}
+
+		Da $p_{obs}(x) = %(pobs)s %(hypresult)s $H_{o\sigma^{2}}$. Vi har dermed følgende model: $M_{1}: X_{ij} \sim N(\mu_{i}, \sigma^{2}), \quad i = 1,\dots,k \quad j = 1,\dots,n_{i}$. Samt følgende estimater:
+		\begin{eqnarray}\nonumber
+		\mu_{i} \leftarrow \bar{x_{i}}.\sim\sim N(\mu_{i}, \frac{\sigma^{2}}{n_{i}}), \quad i = 1, \dots, k\\\nonumber
+		\sigma^{2} \leftarrow s_{1}^{2}\sim\sim\sigma^{2}\chi^{2}(f_{1})/f_{1}
+		\end{eqnarray}

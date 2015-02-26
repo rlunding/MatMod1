@@ -11,11 +11,16 @@ def bartlettPDF(formula, k, fi, si):
     if (formula):
         result = utilities.loadformula("bartlett_test", "tests")
     p = pobs(k, fi, si)
+    if p > 0.05:
+        hypresult = " > 0.05$ forkaster vi ikke hypotesen "
+    else:
+        hypresult = " < 0.05$ forkaster vi hypotesen "
+
     with open (template_path + "template_bartlett_test.txt", "r") as template_file:
         result += template_file.read() % {
             'k': int(round(k,0)),
-            'fi': "liste af input",
-            'si': "liste af input",
+            'fi': listtostr(fi),
+            'si': listtostr(si),
             'n': int(round((sumf1(fi)+k),0)),
             'fone': int(round(sumf1(fi),0)),
             'SSDone': round(SSD(fi, si), 4),
@@ -25,13 +30,9 @@ def bartlettPDF(formula, k, fi, si):
             'fis': round(FIS(fi), 4),
             'C': round(C(k, fi), 4),
             'Ba': round(Ba(k, fi, si), 4),
-            'pobs': round(pobs(k, fi, si), 4)
+            'pobs': round(pobs(k, fi, si), 4),
+            'hypresult': hypresult,
         }
-    result += r"Da $p_{obs}(x) = " + str(round(p, 3))
-    if p > 0.05:
-        result += " > 0.05$ forkaster vi ikke hypotesen."
-    else:
-        result += " < 0.05$ forkaster vi hypotesen."
     return result
 
 def pobs(k, fi, si):
@@ -72,6 +73,14 @@ def sumf1(fi):
     for i in range(len(fi)):
         sumf += fi[i] * 1.0
     return sumf
+
+
+def listtostr(inputlist):
+    output = ""
+    for x in range(len(inputlist)):
+        output += str(int(round(inputlist[x], 0))) + ", "
+    output = output[:-2]
+    return output
 
 # k = 7
 # fi = (2, 2, 2, 2, 2, 2, 2)
