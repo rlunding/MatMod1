@@ -1,0 +1,10 @@
+        Da vi kender $n = %(n)s, \bar{x}. = %(muresult)s, \sigma_{0}^{2} = %(sigma)s$ og $\mu_{0} = %(muzero)s$, kan der indsættes og udregnes:
+		\begin{eqnarray}\nonumber
+		u(x) & = & \frac{\bar{x}. - \mu_{0}}{\sqrt{\frac{\sigma_{0}^{2}}{n}}}\\\nonumber
+		& = & \frac{%(muresult)s - %(muzero)s}{\sqrt{\frac{%(sigma)s}{%(n)s}}}\\\nonumber
+		& = & %(uresult)s\\\nonumber
+		p_{obs}(x) & = & 2[1- \Phi(|u(x)|)]\\ \nonumber
+		& = & 2[1- \Phi(|%(uresult)s|)]\\ \nonumber
+		& = & 2[1- %(phiresult)s]\\ \nonumber
+		& = & %(pobs)s
+		\end{eqnarray}

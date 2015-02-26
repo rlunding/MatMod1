@@ -1,0 +1,10 @@
+		Da vi kender $n = %(n)s, \bar{x}. = %(muresult)s, s^{2} = %(sigmaresult)s$ og $\mu_{0} = %(muzero)s$, kan der indsættes og udregnes:
+		\begin{eqnarray}\nonumber
+		t(x) & = & \frac{\bar{x}. - \mu_{0}}{\sqrt{\frac{s^{2}}{n}}}\\\nonumber
+		& = & \frac{%(muresult)s - %(muzero)s}{\sqrt{\frac{%(sigmaresult)s}{%(n)s}}}\\\nonumber
+		& = & %(tresult)s\\\nonumber
+		p_{obs}(x) & = & 2[1- F_{t(f)}(|t(x)|)]\\\nonumber
+		& = & 2[1- F_{t(%(f)s)}(|%(tresult)s|)]\\\nonumber
+		& = & 2[1 - %(Ftresult)s]\\\nonumber
+		& = & %(pobs)s
+		\end{eqnarray}
