@@ -27,3 +27,6 @@ def Ff(value, f1, f2):
 
 def Fchi2(value, dof):
     return scipy.stats.chi2.cdf(value, dof)
+
+
+print(2*(1-Ft(0.5130, 27)))

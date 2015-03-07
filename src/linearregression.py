@@ -2,6 +2,7 @@ __author__ = 'Lunding'
 
 import math
 import utilities
+import stattable as st
 
 template_path = r"templates_linear_regression/"
 
@@ -58,4 +59,44 @@ def calculatetemplate(n, Sx, St, USSx, USSt, SP):
     print(SSD02(n, Sx, St, USSx, USSt, SP))
     print(s02sq(n, Sx, St, USSx, USSt, SP))
 
-calculatetemplate(21.0, 6068.0, 525.0, 1773300.0, 13353.0, 153773.0)
+def fone(fi):
+    result = 0
+    for x in range(len(fi)):
+        result += fi[x]
+    return result
+
+def FtestPDF(formula, n, k, SSDzerotwo, fone, SSDone, s1sq):
+    result = ""
+    if (formula):
+        result = utilities.loadformula("ftest", "linear_regression")
+    f02 = n - 2
+    dof1 = k-2
+    dof2 = n-k
+    fx = ((SSDzerotwo - SSDone) / (f02 - fone)) / s1sq
+    FF = st.Ff(fx, dof1, dof2)
+    pobs = 1 - FF
+
+    if pobs > 0.05:
+        hypresult = r"> 0.05$ accepterer vi hypotesen"
+    else:
+        hypresult = r"> 0.05$ accepterer vi hypotesen"
+
+    with open (template_path + "template_ftest.txt", "r") as template_file:
+        result += template_file.read() % {
+            'n': int(round(n,0)),
+            'k': int(round(k,0)),
+            'f02': int(round(f02,0)),
+            'f1': int(round(fone, 0)),
+            'SSD1': round(SSDone, 4),
+            'SSD02': round(SSDzerotwo, 4),
+            's1sq': round(s1sq, 4),
+            'fx': round(fx, 4),
+            'ff': round(FF, 4),
+            'dof1': int(round(dof1, 0)),
+            'dof2': int(round(dof2, 0)),
+            'pobs': round(pobs, 4),
+            'hypresult': hypresult
+        }
+    return result
+
+#calculatetemplate(21.0, 6068.0, 525.0, 1773300.0, 13353.0, 153773.0)

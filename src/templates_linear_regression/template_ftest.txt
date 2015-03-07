@@ -1,0 +1,6 @@
+        Fra de forskellige beregningsskemaer kender vi værdierne: $SSD_{1} = %(SSD1)s, SSD_{02} = %(SSD02)s, f_{02} = %(n)s - 2 = %(f02)s, f_{1} = %(f1)s$ og $s_{1}^{2} = %(s1sq)s6$. Dermed kan vi beregne $F(x)$ og $p_{obs}$:
+		\begin{eqnarray}\nonumber
+		F(x) & = & \frac{\frac{%(SSD02)s - %(SSD1)s}{%(f02)s - %(f1)s}}{%(s1sq)s} = %(fx)s\\\nonumber
+		p_{obs} & = & 1 - F_{F(%(dof1)s,%(dof2)s)}(%(fx)s) = 1 - %(ff)s = %(pobs)s
+		\end{eqnarray}
+		Da $p_{obs} = %(pobs)s %(hypresult)s. Vi er dermed i model: $M_{2}: X_{ij} \sim N(\alpha+\beta t_{i}, \sigma^{2}), \quad i = 1, \dots, k, j = 1, \dots, n_{i}$, hvor $k = %(k)s$.\\

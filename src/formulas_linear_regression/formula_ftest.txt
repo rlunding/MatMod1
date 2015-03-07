@@ -1,0 +1,5 @@
+        For at lave en test af lineær regression, bruges følgende F-test (fra BG: side 134):
+		\begin{eqnarray}\nonumber
+		F(x) & = & \frac{\frac{SSD_{02} - SSD_{1}}{f_{02}-f_{1}}}{s_{1}^{2}} = \frac{s_{2}^{2}}{s_{1}^{2}}\sim\sim F(k-s,n-k)\\ \nonumber
+		p_{obs}(x) & = & 1 - F_{F(k-2,n-k)}(F(x))
+		\end{eqnarray}

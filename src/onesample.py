@@ -41,7 +41,7 @@ def estimatevarincePDF(formula, n, S, USS):
         }
     return result
 
-def utest(formula, n, S, mu0, sigma):
+def utestPDF(formula, n, S, mu0, sigma):
     result = ""
     if (formula):
         result = utilities.loadformula("utest", "1_sample")
@@ -66,7 +66,7 @@ def utest(formula, n, S, mu0, sigma):
         result += r" < 0.05$ \textbf{forkaster} vi hypotesen.\\"
     return result
 
-def ttest(formula, n, S, USS, mu0):
+def ttestPDF(formula, n, S, USS, mu0):
     result = ""
     if (formula):
         result = utilities.loadformula("ttest", "1_sample")
