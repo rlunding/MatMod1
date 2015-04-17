@@ -1,4 +1,4 @@
-Vi estimerer middelværdi og varians, på følgende måde:
+Vi estimerer middelværdi og varians på følgende måde:
 \begin{eqnarray}\nonumber
 \mu_{1} \leftarrow \bar{x}_{1}. \sim\sim N(\mu, \frac{\sigma_{1}^{2}}{n_{1}}), & \quad &
 \sigma^{2}_{1} \leftarrow s^{2}_{(1)} \sim\sim \sigma_{1}^{2}\chi^{2}(f_{(1)})/f_{(1)}\\ \nonumber

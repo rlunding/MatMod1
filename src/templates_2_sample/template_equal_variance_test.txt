@@ -19,4 +19,5 @@
         \sigma^{2} \leftarrow s_{1}^{2} = \frac{f_{(1)}s_{(1)}^{2} + f_{(2)}s_{(2)}^{2}}{f_{(1)} + f_{(2)}} = \frac{SSD_{(1)} + SSD_{(2)}}{f_{(1)} + f_{(2)}} & \sim\sim\sigma^{2}\chi^{2}(f_{(1)}+f_{(2)})/(f_{(1)}+f_{(2)})\\\nonumber
         s_{1}^{2} = \frac{%(fmax)s %(smax)s + %(fmin)s %(smin)s}{%(fmax)s + %(fmin)s} = %(sigmaone)s & \sim\sim\sigma^{2}\chi^{2}(%(fone)s)/%(fone)s
         \end{eqnarray}
+        hvor $f_{1} = f_{(1)} + f_{(2)} = n. - 2$.\\
         \fi

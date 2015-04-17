@@ -54,9 +54,15 @@ f1 = n1 - 1
 f2 = n2 - 1
 s1sq = ts.estimateVariance(n1, S1, USS1)
 s2sq = ts.estimateVariance(n2, S2, USS2)
+x1 = ts.estimateMean(n1, S1)
+x2 = ts.estimateMean(n2, S2)
 
 opgave31 = utilities.createexercise("Estimer middelværdi og varians", ts.estimateMean(n1, S1) + ts.estimateVariance(n1, S1, USS1))
 opgave32 = utilities.createexercise("Undersøg om variansen er ens", ts.equalvariancePDF(f1, f2, s1sq, s2sq));
+opgave33 = utilities.createexercise("Undersøg om middelværdi er ens, varians forskellig", ts.equalmeandifferentvariancePDF(f1, f2, x1, x2, s1sq, s2sq))
+
+
+somm14 = utilities.createexercise("Ens varians", bartlett.bartlettPDF(True, 3, (7, 7, 6), ()))
 
 utilities.createLatexPDF("Afl",utilities.createdocument(
     utilities.createsection("Opgave 1",
@@ -66,6 +72,6 @@ utilities.createLatexPDF("Afl",utilities.createdocument(
     utilities.createsection("Opgave 2",
                             opgave21 + opgave22 + opgave23) +
     utilities.createsection("Opgave 3 - 2 Rækker",
-                            opgave31 + opgave32)
+                            opgave31 + opgave32 + opgave33)
 ))
 

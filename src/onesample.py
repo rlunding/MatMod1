@@ -2,7 +2,7 @@ from __future__ import division
 __author__ = 'Lunding'
 
 import utilities
-import stattable as st
+import stattableOLD as st
 import math
 
 template_path = r"templates_1_sample/"

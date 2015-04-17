@@ -1,7 +1,7 @@
 __author__ = 'Lunding'
 
 import math
-import stattable as st
+import stattableOLD as st
 import utilities
 
 template_path = r"templates_tests/"

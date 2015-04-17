@@ -2,7 +2,7 @@ __author__ = 'Lunding'
 
 import math
 import utilities
-import stattable as st
+import stattableOLD as st
 
 template_path = r"templates_linear_regression/"
 

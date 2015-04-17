@@ -1,0 +1,24 @@
+        Der arbejdes indenfor følgende model: $M_{0} = X_{ij} \sim N(\mu_{i},\sigma_{i}{2}), \quad j = 1, \dots n_{i}, i = 1,2$. Følgende hypotese skal testes: $H_{0\mu}: \mu_{1} = \mu_{2}$.
+        Dettes gøres ved at lave en t-test, hvor
+
+	    \begin{eqnarray}\nonumber
+	    t(x) & = & \frac{\bar{x}_{1}. - \bar{x}_{2}.}{\sqrt{s_{(1)}^{2}/n_{1}+s_{(2)}^{2}/n_{2}}} \sim\sim t(\bar{f}), \quad \text{p. 88.}\\ \nonumber
+	    & = & \frac{%(x1)s - %(x2)s}{\sqrt{%(s1sq)s/ %(n1)s + %(s2sq)s / %(n2)s}}\\ \nonumber
+	    & = & %(Tresult)s\\ \nonumber
+	    \bar{f} & = & \frac{(\frac{s_{(1)}^{2}}{n_{1}} + \frac{s_{(2)}^{2}}{n_{1}})^{2}}{\frac{ (\frac{s_{(1)}^{2}}{n_{1}})^{2} }{f_{(1)}} + \frac{ (\frac{s_{(2)}^{2}}{n_{2}})^{2} }{f_{(2)}}}\\\nonumber
+	    & = & \frac{(\frac{%(s1sq)s}{%(n1)s} + \frac{%(s2sq)s}{%(n2)s})^{2}}{\frac{ (\frac{%(s1sq)s}{%(n1)s})^{2} }{%(f1)s} + \frac{ (\frac{%(s2sq)s}{%(n2)s})^{2} }{%(f2)s}}\\\nonumber
+	    & = & %(fbar)s\\\nonumber
+	    p_{obs}(x) & = & 2[1 - F_{t(\bar{f})}(|t(x)|)]\\\nonumber
+	    & = & 2[1 - F_{t(%(fbar)s)}(%(Tresult)s)] \\\nonumber
+	    & = & 2 * (1- %(tabelresult)s)\\\nonumber
+	    & = & %(pobs)s
+	    \end{eqnarray}
+
+        %(pobsresult)s
+
+        %(include)s
+        Dermed skal der også laves nye estimater:
+        \begin{eqnarray}\nonumber
+        =
+        \end{eqnarray}
+        \fi
